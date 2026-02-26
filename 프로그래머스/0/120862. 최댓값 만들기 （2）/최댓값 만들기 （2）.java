@@ -1,14 +1,8 @@
+import java.util.*;
+
 class Solution {
     public int solution(int[] numbers) {
-        int answer = -500000000;
-        for(int i =0; i<numbers.length;i++){
-            for(int j = i+1; j<numbers.length;j++){
-                int max = numbers[i] * numbers[j];    
-                if(max > answer){
-                    answer = max;   
-                }
-            }
-        }
-        return answer;
+        Arrays.sort(numbers);
+        return Math.max(numbers[0]*numbers[1], numbers[numbers.length-1]*numbers[numbers.length-2]);
     }
 }
