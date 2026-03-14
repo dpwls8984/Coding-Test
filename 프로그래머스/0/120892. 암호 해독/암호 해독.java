@@ -3,7 +3,7 @@ class Solution {
         StringBuffer stringBuffer = new StringBuffer();
         int a = 1;
 
-        for(int i = 0;i<cipher.length()+1;i++){
+        for(int i = 0;i<=cipher.length();i++){
             if(i == (code*a)){
                 stringBuffer.append(cipher.charAt(i-1));
                 a++;
