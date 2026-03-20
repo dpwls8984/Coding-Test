@@ -23,14 +23,16 @@ class Solution {
         n-1: 9
         i: 2, 3, 4, 5, 6, 7, 8
         answer = 3
+        
+        n-1: 11
+        i: 2, 3, 4, 5, 6, ... , 11
+        answer = 11
         */
         
-        for(int i = 2;i<=n;i++){
+        for(int i = 2;i<n;i++){
             if((n-1) % i == 0){
                 answer = i;
                 break;
-            }else{
-                answer = n-1;
             }
         }
         
