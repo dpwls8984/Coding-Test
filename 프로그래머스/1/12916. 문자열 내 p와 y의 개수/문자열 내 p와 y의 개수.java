@@ -1,6 +1,8 @@
 class Solution {
     boolean solution(String s) {
+        s = s.toUpperCase();
         
-        return s.replaceAll("[^pP]", "").length() - s.replaceAll("[^yY]", "").length() == 0 ? true : false;
+        return s.chars().filter(e -> 'P' == e).count() == s.chars().filter(e -> 'Y' == e).count();
     }
 }
+
